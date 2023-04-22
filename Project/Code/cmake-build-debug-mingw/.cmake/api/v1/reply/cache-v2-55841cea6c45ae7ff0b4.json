@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "s:/WorkSpace/DataStructure/LinearList/Code/cmake-build-debug-mingw"
+			"value" : "s:/WorkSpace/DataStructure/Project/Code/cmake-build-debug-mingw"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -431,7 +431,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "S:/WorkSpace/DataStructure/LinearList/Code/cmake-build-debug-mingw/CMakeFiles/pkgRedirects"
+			"value" : "S:/WorkSpace/DataStructure/Project/Code/cmake-build-debug-mingw/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -503,7 +503,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "S:/WorkSpace/DataStructure/LinearList/Code"
+			"value" : "S:/WorkSpace/DataStructure/Project/Code"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -1119,7 +1119,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "S:/WorkSpace/DataStructure/LinearList/Code/cmake-build-debug-mingw"
+			"value" : "S:/WorkSpace/DataStructure/Project/Code/cmake-build-debug-mingw"
 		},
 		{
 			"name" : "Code_IS_TOP_LEVEL",
@@ -1143,7 +1143,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "S:/WorkSpace/DataStructure/LinearList/Code"
+			"value" : "S:/WorkSpace/DataStructure/Project/Code"
 		},
 		{
 			"name" : "_CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED",

@@ -1,6 +1,0 @@
-# ninja log v5
-12	131	7038710976498447	CMakeFiles/Code.dir/abc.c.obj	52314a88876809c1
-2	112	7038813246927229	CMakeFiles/Code.dir/main.c.obj	e290a23bac47a2c2
-118	435	7038813250147953	Code.exe	7a5ae0ce102d300
-2	191	7038822482916043	build.ninja	a38d37cbf48886b1
-11	118	7038813246997243	CMakeFiles/Code.dir/LinearList.c.obj	2f4dc66b3af3e6ef
