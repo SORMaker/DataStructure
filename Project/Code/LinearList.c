@@ -23,7 +23,6 @@
  *          headnode->data = 0
  *          headnode->next = NULL
  */
-
 int InitList(LinkList *L)
 {
     (*L) = (LinkList)malloc(sizeof(LNode));
