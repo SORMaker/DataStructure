@@ -15,7 +15,7 @@ Status GetElem(SqList L, int i, ElemType *e){
     {
         return ERROR;
     }
-    e = L.elem[i-1];
+    *e = L.elem[i-1];
     return OK;
 }
 
@@ -49,11 +49,11 @@ Status InsertElem(SqList *L, int i, ElemType e){
 }
 
 Status DeleteElem(SqList *L, int i){
-    if (i < 1 || i > L->length + 1)
+    if (i < 1 || i > L->length)
     {
         return ERROR;
     }
-    for(int j=i;j<L->length-1;j++){
+    for(int j=i;j<=L->length-1;j++){
         L->elem[j-1] = L->elem[j];
     }
     L->length--;

@@ -1,8 +1,17 @@
-#include "Sequential List/SeqList.h"
+#include "SequentialList/SeqList.h"
 #include <assert.h>
-int main(){
 
-SqList L;
+void SeqList_test();
+
+int main(){
+    SeqList_test();
+
+    return 0;
+}
+
+void SeqList_test(){
+
+    SqList L;
     ElemType e;
     Status status;
 
@@ -103,6 +112,4 @@ SqList L;
     // 释放内存
     free(L.elem);
     printf("所有测试用例通过！\n");
-
-    return 0;
 }
