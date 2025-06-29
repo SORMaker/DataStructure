@@ -5,6 +5,9 @@
 #ifndef CODE_COMMON_H
 #define CODE_COMMON_H
 
+#define ElemType int
+#define Status int
+
 #define OK      1
 #define ERROR   1
 #define TRUE    1
