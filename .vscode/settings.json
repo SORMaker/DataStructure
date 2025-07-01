@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "seqlist.h": "c",
+        "linkedlist.h": "c",
+        "assert.h": "c",
+        "common.h": "c"
+    }
+}

@@ -1,8 +1,8 @@
 .PHONY: clean all
 
-CFLAGS = -Wall -g -O0
+CFLAGS = -Wall -g -O2
 targets = main
-sources = main.c ./SequentialList/SeqList.c
+sources = main.c LinkedList.c
 
 BUILD_DIR = build
 
@@ -12,7 +12,6 @@ all: $(targets)
 
 $(BUILD_DIR):
 	@mkdir -p $(BUILD_DIR)
-	@mkdir -p $(BUILD_DIR)/SequentialList
 
 $(targets): $(objects)
 	@gcc $(CFLAGS) $(objects) -o $(BUILD_DIR)/$@

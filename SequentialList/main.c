@@ -1,4 +1,4 @@
-#include "SequentialList/SeqList.h"
+#include "SeqList.h"
 #include <assert.h>
 
 void SeqList_test();
