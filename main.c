@@ -5,7 +5,7 @@ void SeqList_test();
 
 int main(){
     SeqList_test();
-
+    
     return 0;
 }
 
