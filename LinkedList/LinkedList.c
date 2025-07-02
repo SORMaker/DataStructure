@@ -66,17 +66,8 @@ Status InsertElem(LinkList *L, int i, ElemType e){
 Status DeleteElem(LinkList *L, int i){
     LNode* p = (*L);
     LNode* q = NULL;
-    if (i == 1)
-    {
-        q = p->next;
-        p->next = q->next;
-        free(q);
-
-        return OK;
-    }
-    
     int j = 0;
-
+    
     while (p->next && (j < i-1))
     {
         p = p->next;
