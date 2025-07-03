@@ -16,5 +16,5 @@ Status InsertElem(LinkList *L, int i, ElemType e);
 Status DeleteElem(LinkList *L, int i);
 Status CreateListFromHead(LinkList *L, int n);
 Status CreateListFromRear(LinkList *L, int n);
-void InputDataFromKeyboard(LNode* node);
+ElemType InputDataFromKeyboard();
 void DestroyList(LinkList *L);

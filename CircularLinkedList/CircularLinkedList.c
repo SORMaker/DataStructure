@@ -101,6 +101,7 @@ void DestroyList(CLinkList *L){
 
 Status CreateListFromHead(CLinkList *L, int n){
     Status status = InitList(L);
+    ElemType e;
     if (status == ERROR)
     {
         return ERROR;
@@ -111,10 +112,12 @@ Status CreateListFromHead(CLinkList *L, int n){
         CLNode* p = (CLNode*)malloc(sizeof(CLNode));
         if (!p)
         {
+            DestroyList(L); // 内存分配失败时清理资源
             return ERROR;
         }
         
-        InputDataFromKeyboard(p);
+        e = InputDataFromKeyboard();
+        p->data = e;
         p->next = (*L)->next;
         (*L)->next = p;
     }
@@ -123,6 +126,7 @@ Status CreateListFromHead(CLinkList *L, int n){
 
 Status CreateListFromRear(CLinkList *L, int n){
     Status status = InitList(L);
+    ElemType e;
     if (status == ERROR)
     {
         return ERROR;
@@ -134,10 +138,12 @@ Status CreateListFromRear(CLinkList *L, int n){
         CLNode* p = (CLNode*)malloc(sizeof(CLNode));
         if (!p)
         {
+            DestroyList(L);
             return ERROR;
         }
         
-        InputDataFromKeyboard(p);
+        e = InputDataFromKeyboard();
+        p->data = e;
         p->next = (*L);
         r->next = p;
         r = p;
@@ -145,6 +151,17 @@ Status CreateListFromRear(CLinkList *L, int n){
     return OK;
 }
 
-void InputDataFromKeyboard(CLNode* node){
-    scanf("%d", &node->data);
+ElemType InputDataFromKeyboard(){
+    char line[100];
+    ElemType e;
+    if(fgets(line, sizeof(line), stdin) == NULL){
+        printf("READ INPUT ERROR!");
+        return ERROR;
+    }
+    if(sscanf(line, "%d", &e) != 1)
+    {
+        printf("INPUT FORMAT ERROR! PLEASE INPUT AGAIN!\n");
+        return ERROR;
+    }
+    return e;
 }

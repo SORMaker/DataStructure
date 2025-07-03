@@ -17,4 +17,4 @@ Status DeleteElem(CLinkList *L, int i);
 void DestroyList(CLinkList *L);
 Status CreateListFromHead(CLinkList *L, int n);
 Status CreateListFromRear(CLinkList *L, int n);
-void InputDataFromKeyboard(CLNode* node);
+ElemType InputDataFromKeyboard();

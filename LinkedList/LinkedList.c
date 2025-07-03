@@ -87,8 +87,20 @@ Status DeleteElem(LinkList *L, int i){
     return OK;
 }
 
+void DestroyList(LinkList *L){
+    LNode* p = (*L);
+    while (p)
+    {
+        LNode* temp = p;
+        p = p->next;
+        free(temp);
+    }
+    (*L) = NULL;
+}
+
 Status CreateListFromHead(LinkList *L, int n){
     Status status = InitList(L);
+    ElemType e;
     if (status == ERROR)
     {
         return ERROR;
@@ -99,10 +111,12 @@ Status CreateListFromHead(LinkList *L, int n){
         LNode* p = (LNode*)malloc(sizeof(LNode));
         if (!p)
         {
+            DestroyList(L);
             return ERROR;
         }
         
-        InputDataFromKeyboard(p);
+        e = InputDataFromKeyboard();
+        p->data = e;
         p->next = (*L)->next;
         (*L)->next = p;
     }
@@ -111,6 +125,7 @@ Status CreateListFromHead(LinkList *L, int n){
 
 Status CreateListFromRear(LinkList *L, int n){
     Status status = InitList(L);
+    ElemType e;
     if (status == ERROR)
     {
         return ERROR;
@@ -122,10 +137,12 @@ Status CreateListFromRear(LinkList *L, int n){
         LNode* p = (LNode*)malloc(sizeof(LNode));
         if (!p)
         {
+            DestroyList(L);
             return ERROR;
         }
         
-        InputDataFromKeyboard(p);
+        e = InputDataFromKeyboard(p);
+        p->data = e;
         p->next = NULL;
         r->next = p;
         r = p;
@@ -133,17 +150,18 @@ Status CreateListFromRear(LinkList *L, int n){
     return OK;
 }
 
-void InputDataFromKeyboard(LNode* node){
-    scanf("%d", &node->data);
+ElemType InputDataFromKeyboard(){
+    char line[100];
+    ElemType e;
+    if(fgets(line, sizeof(line), stdin) == NULL){
+        printf("READ INPUT ERROR!");
+        return ERROR;
+    }
+    if(sscanf(line, "%d", &e) != 1)
+    {
+        printf("INPUT FORMAT ERROR! PLEASE INPUT AGAIN!\n");
+        return ERROR;
+    }
+    return e;
 }
 
-void DestroyList(LinkList *L){
-    LNode* p = (*L);
-    while (p)
-    {
-        LNode* temp = p;
-        p = p->next;
-        free(temp);
-    }
-    (*L) = NULL;
-}

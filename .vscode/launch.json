@@ -8,7 +8,7 @@
             "name": "(gdb) Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceRoot}/CircularLinkedList/build/main",
+            "program": "${workspaceRoot}/DoubleLinkedList/build/main",
             "args": [],
             "stopAtEntry": true,
             "cwd": "${fileDirname}",
