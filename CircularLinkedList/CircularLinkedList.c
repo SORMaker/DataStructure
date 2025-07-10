@@ -16,6 +16,7 @@ Status InitList(CLinkList *L){
 }
 
 Status GetElem(CLinkList L, int i, ElemType *e){
+    if(!L || L->next == L || i < 1) return ERROR;
     CLNode* p = L->next;
     int j = 1;
     while ((p != L) && j < i )
@@ -23,7 +24,7 @@ Status GetElem(CLinkList L, int i, ElemType *e){
         p = p->next;
         j++;
     }
-    if (p == L || j > i)
+    if (p == L || j != i)
     {
         return ERROR;
     }
@@ -32,6 +33,7 @@ Status GetElem(CLinkList L, int i, ElemType *e){
 }
 
 CLNode* LocateElem(CLinkList L, ElemType e){
+    if(!L || L->next == L) return NULL;
     CLNode* p = L->next;
     
     while (p != L && p->data != e)
@@ -39,7 +41,7 @@ CLNode* LocateElem(CLinkList L, ElemType e){
         p = p->next;
     }
     
-    return p;
+    return (p == L) ? NULL : p;
     
 }
 

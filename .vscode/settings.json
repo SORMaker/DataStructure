@@ -5,6 +5,7 @@
         "assert.h": "c",
         "common.h": "c",
         "circularlinkedlist.h": "c",
-        "doublelinkedlist.h": "c"
+        "doublelinkedlist.h": "c",
+        "doublycircularlinkedlist.h": "c"
     }
 }
